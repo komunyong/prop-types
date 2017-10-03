@@ -30,7 +30,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
     var warningMessages = [];
     for (var typeSpecName in typeSpecs) {
       if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
+        var error, message;
         // Prop type validation may throw. In case they do, we don't want to
         // fail the render phase where it didn't fail before. So we log it.
         // After these have been cleaned up, we'll let them throw.
